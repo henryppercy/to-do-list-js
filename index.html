@@ -3,24 +3,27 @@
 <head>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Template</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/scripts.js"></script>
+  <title>Template</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/scripts.js"></script>
 </head>
 
 <body>
-  <section>
-    <h1>to do:</h1>
-    <label for="name">Add</label>
-    <input type="text" id="name" name="name" placeholder="add item to list">
-    
+  <section class="heading">
+    <h1>Good Morning.</h1>
   </section>
-  <section>
-    <a>+</a>
-    <p>Wash the car</p>
-    <a>remove</a>
+  <form class="add-task">
+    <input type="text" id="name" name="name" placeholder="Click to add a task">
+    <input type="submit" value="+">
+  </form>
+  <section class="task-list">
+    <ul>
+      <li class="task">
+        <button></button>
+        <p>Wash the car</p>
+      </li>
+    </ul>
   </section>
 </body>
-
 </html>
