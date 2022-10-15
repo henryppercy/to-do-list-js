@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+/*----------GLOBAL----------*/
 *, *::before, *::after {
   box-sizing: border-box;
   font-family: helvetica, arial, sans-serif;
@@ -8,7 +7,7 @@
 :root {
   --light: #ffffff;
   --dark: #2B2B2B;
-  --grey: #757575;
+  --grey: #C5C5C5;
 }
 
 a,
@@ -21,9 +20,15 @@ a:active {
     font-weight: inherit;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: var(--light);
   color: var(--dark);
   margin: 0;
   padding: 0;
@@ -39,14 +44,19 @@ img {
   height: auto;
 }
 
+p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/*----------HEADING----------*/
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 500;
   background-color: var(--light);
-  border-radius: 0.2rem;
+  border-radius: 0.45rem;
   padding: 0.2rem 0.5rem;
   margin: 6rem 4rem;
-  box-shadow: #00000040 0px 30px 90px;
 }
 
 .heading {
@@ -54,6 +64,7 @@ h1 {
   justify-content: flex-start;
 }
 
+/*----------TASK INPUT----------*/
 form {
   display: flex;
   justify-content: flex-start;
@@ -65,21 +76,82 @@ input[type=text] {
   border-radius: 0.3rem 0 0 0.3rem;
   border: none;
   border-right: var(--grey) solid 0.1rem;
-  padding: 0.5rem;
+  padding: 0.2rem 1rem;
   margin: 0;
-  box-shadow: #00000040 0px 30px 90px;
 }
 
 input[type=submit] {
-  color: var(--grey);
+  font-size: 2rem;
+  color: var(--dark);
   background-color: var(--light);
-  padding: 0.5rem;
+  padding: 0.2rem 1.5rem;
   border-radius: 0 0.3rem 0.3rem 0;
   border: none;
-  box-shadow: #00000040 0px 30px 90px;
+  cursor: pointer;
 }
 
 .add-task {
   font-size: 1.3rem;
-  margin: 1rem 4rem;
+  margin: 1rem 4rem 2.5rem;
+}
+
+/*----------TASKS----------*/
+ul {
+  padding: 0;
+}
+
+li.task {
+  background-color: var(--light);
+  list-style: none;
+  border-radius: 0.3rem;
+  margin: 0.1rem 4rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+li.task > div {
+  display: flex;
+  align-items: center;
+}
+
+input[type=checkbox] {
+  width: 1rem;
+  height: 1rem;
+  margin: 0.75rem 2rem;
+}
+
+li.task > img {
+  width: 1.4rem;  
+  margin-right: 2rem;
+  cursor: pointer;
+
+  justify-self: flex-end;
+}
+
+/*----------COMPLETED----------*/
+li.completed-task {
+  background-color: var(--grey);
+  list-style: none;
+  border-radius: 0.3rem;
+  margin: 0.1rem 4rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+li.completed-task > div {
+  text-decoration: line-through;
+
+  display: flex;
+  align-items: center;
+}
+
+li.completed-task > img {
+  fill: red;
+  width: 1.4rem;  
+  margin-right: 2rem;
+  cursor: pointer;
+
+  justify-self: flex-end;
 }
