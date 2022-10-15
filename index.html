@@ -3,13 +3,41 @@
 <head>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Template</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/scripts.js"></script>
+  <title>Template</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <script defer src="js/scripts.js"></script>
 </head>
 
 <body>
+  <section class="heading">
+    <h1>Good Morning.</h1>
+  </section>
+  <form class="add-task">
+    <input type="text" id="name" name="name" placeholder="Click to add a task">
+    <input type="submit" value="+">
+  </form>
+  <section class="task-list">
+    <ul>
+      <li class="task">
+        <div>
+          <input type="checkbox">
+          <p>Complete CSS and HTML for to-do list app</p>
+        </div>
+        <img src="images/bin.svg" alt="An icon showing a rubbish bin">
+      </li>
+      
+      <li class="completed-task">
+        <div>
+          <input type="checkbox">
+          <p>Start javascript functionality</p>
+        </div>
+        <img src="images/bin.svg" alt="An icon showing a rubbish bin">
+      </li>
+    </ul>
+  </section>
 </body>
-
 </html>
